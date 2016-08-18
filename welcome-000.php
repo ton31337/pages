@@ -1,3 +1,4 @@
+<?php $domain = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : ''; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Welcome to 000webhost!</title>
+    <title>Welcome to <?php echo $domain; ?> Free Website</title>
+    <meta name="description" content="<?php echo $domain; ?> is a free website. Simply build and host your own websites for free with the best web hosting provider 000webhost.com" />
+    <meta name="keywords" content="<?php echo $domain; ?>, 000webhostapp, web host app, free website, free web site, free hosting, free web host, free site, best web hosting, 000webhost" />
+    <meta itemprop="name" content="<?php echo $domain; ?>" />
+    <meta itemprop="description" content="<?php echo $domain; ?> is a free website. Simply build and host your own websites for free with the best web hosting provider 000webhost.com" />
+    <meta property="og:url" content="https://<?php echo $domain; ?>/"/>
+    <meta property="og:site_name" content="<?php echo $domain; ?>"/>
+    <meta property="og:title" content="Welcome to <?php echo $domain; ?> free website"/>
+    <meta property="og:description" content="<?php echo $domain; ?> is a free website. Simply build and host your own websites for free with the best web hosting provider 000webhost.com"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://www.000webhost.com/static/default.000webhost.com/images/logo/400x400-red.png"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@000webhost_com" />
+    <meta name="twitter:title" content="Welcome to <?php echo $domain; ?> free website" />
+    <meta name="twitter:description" content="<?php echo $domain; ?> is a free website. Simply build and host your own websites for free with the best web hosting provider 000webhost.com" />
+    <meta name="twitter:image" content="https://www.000webhost.com/static/default.000webhost.com/images/logo/400x400-red.png" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/ee069c3df0.js"></script>
@@ -164,9 +180,9 @@
             <div class="col-lg-12 text-center">
                 <div class="main-icon img-circle bg-primary"><i class="fa fa-lightbulb-o"></i></div>
                 <h1 class="text-primary">Hooray, your free cloud app has been started!</h1>
-                <h2 class="hostname"><?php echo isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : ''; ?></h2>
+                <h2 class="hostname"><?php echo $domain; ?></h2>
                 <hr>
-                <p>What's next? Simply upload your <?php echo isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : ''; ?> website to <strong>public_html</strong> folder. Looking for more ideas? Check this out:</p>
+                <p>What's next? Simply upload your <?php echo $domain; ?> website to <strong>public_html</strong> folder. Looking for more ideas? Check this out:</p>
             </div>
         </div>
         <div class="row panel-row">
@@ -175,7 +191,7 @@
                     <div class="panel-body text-center">
                         <h3><i class="fa fa-picture-o"></i> Build an Easy Website?</h3>
                         <p class="description">Simply build beautiful websites with an Easy Website Builder in just a few clicks.</p>
-                        <a href="#">Click &amp; learn more</a>
+                        <a href="https://www.000webhost.com/website-faq" target="_blank">Click &amp; learn more</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +200,7 @@
                     <div class="panel-body text-center">
                         <h3><i class="fa fa-cloud-upload"></i> Upload Your Own Website?</h3>
                         <p class="description">Upload all your website files using fast online file manager or do it via FTP.</p>
-                        <a href="#">Click &amp; learn more</a>
+                        <a href="https://www.000webhost.com/website-faq" target="_blank">Click &amp; learn more</a>
                     </div>
                 </div>
             </div>
@@ -193,7 +209,7 @@
                     <div class="panel-body text-center">
                         <h3><i class="fa fa-flask"></i> Learn, Build, Grow!</h3>
                         <p class="description">Here we will teach you how to run successful websites that really grow.</p>
-                        <a href="#">Click &amp; learn more</a>
+                        <a href="http://www.000webhost.com/forum/" target="_blank">Click &amp; learn more</a>
                     </div>
                 </div>
             </div>
