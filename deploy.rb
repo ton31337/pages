@@ -21,8 +21,8 @@ task :deploy do
 end
 
 task :run_after do
-  system "chown -R root:48 $deploy_to"
-  system "chmod -R 644 $deploy_to"
-  system "chmod 710 $deploy_to"
+  system "chown -R root:48 #{deploy_to}"
+  system "chmod -R 644 #{deploy_to}"
+  system "chmod 710 #{deploy_to}"
 end
 
