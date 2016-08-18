@@ -6,7 +6,7 @@ set :deploy_to, ENV['DEPLOY_PATH'] || '/home/default'
 set :branch, 'master'
 set :rsync_options, %w[--recursive --delete --delete-excluded --exclude .git*]
 set :rsync_copy, "rsync --archive"
-set :rsync_stage, "."
+set :rsync_stage, "deploy"
 set :forward_agent, true
 
 desc 'Deploy to server'
