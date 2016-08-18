@@ -10,19 +10,13 @@ set :forward_agent, true
 
 desc 'Deploy to server'
 task :deploy do
-  to :before_hook do
-    system "rm -rf #{settings.rsync_stage}"
-  end
   deploy do
     invoke 'rsync:deploy'
     invoke :'deploy:cleanup'
-    invoke :run_after
+    to :launch do
+       queue %[ chown -R root:48 #{deploy_to} ]
+       queue %[ chmod -R 644 #{deploy_to} ]
+       queue %[ chmod 710 #{deploy_to} ]
+    end
   end
 end
-
-task :run_after do
-  system "chown -R root:48 #{deploy_to}"
-  system "chmod -R 644 #{deploy_to}"
-  system "chmod 710 #{deploy_to}"
-end
-
