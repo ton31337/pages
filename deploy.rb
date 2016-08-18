@@ -4,7 +4,8 @@ set :user, 'root'
 set :domain, ENV['DOMAIN'] || 'foobar.com'
 set :deploy_to, ENV['DEPLOY_PATH'] || '/home/default'
 set :branch, 'master'
-set :rsync_options, %w[--verbose --recursive --delete --delete-excluded --exclude .git*]
+set :rsync_options, %w[--recursive --delete --delete-excluded --exclude .git*]
+set :rsync_copy, "rsync --archive"
 set :rsync_stage, "."
 set :forward_agent, true
 
