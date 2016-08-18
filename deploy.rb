@@ -16,8 +16,8 @@ task :deploy do
     invoke :'deploy:cleanup'
     to :launch do
        queue %[ chown -R root:48 #{deploy_to} ]
-       queue %[ chmod -R 644 #{deploy_to} ]
-       queue %[ chmod 710 #{deploy_to} ]
+       queue %[ chmod 644 $(find #{deploy_to} -type f) ]
+       queue %[ chmod 710 $(find #{deploy_to} -type d) ]
     end
   end
 end
