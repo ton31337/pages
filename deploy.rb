@@ -2,11 +2,10 @@ require 'mina/rsync'
 
 set :user, 'root'
 set :domain, ENV['DOMAIN'] || 'foobar.com'
-set :deploy_to, '/home/awex'
+set :deploy_to, ENV['PATH'] || '/home/default'
 set :branch, 'master'
-set :repository, 'git@github.com:000webhost/pages.git'
 set :rsync_options, %w[--recursive --delete --delete-excluded --exclude .git*]
-set :rsync_stage, "tmp/#{ENV['DOMAIN']}-deploy"
+set :rsync_stage, "."
 set :forward_agent, true
 
 desc 'Deploy to server'
@@ -22,17 +21,8 @@ task :deploy do
 end
 
 task :run_after do
-  system "chown -R root:48 /home/awex"
-  system "chmod -R 644 /home/awex"
-  system "chmod 710 /home/awex"
+  system "chown -R root:48 $deploy_to"
+  system "chmod -R 644 $deploy_to"
+  system "chmod 710 $deploy_to"
 end
 
-task :precompile do
-  Dir.chdir settings.rsync_stage do
-    system '/usr/local/bin/composer install --no-dev'
-  end
-end
-
-task 'rsync:stage' do
-  invoke 'precompile'
-end
