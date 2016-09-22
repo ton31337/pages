@@ -6,7 +6,7 @@ set :deploy_to, '/home/awex'
 set :branch, 'master'
 set :rsync_options, %w[--recursive --delete --delete-excluded --exclude .git* --exclude deploy.rb]
 set :rsync_copy, "rsync --archive"
-set :rsync_stage, "deploy"
+set :rsync_stage, "tmp/#{ENV['DOMAIN']}-deploy"
 set :forward_agent, true
 
 desc 'Deploy to server'
