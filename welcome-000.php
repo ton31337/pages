@@ -179,7 +179,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="main-icon img-circle bg-primary"><i class="fa fa-lightbulb-o"></i></div>
-                <h1 class="text-primary">Hooray, your free cloud app has been started!</h1>
+                <h1 class="text-primary">Hooray, your free website has been started!</h1>
                 <h2 class="hostname"><?php echo $domain; ?></h2>
                 <hr>
                 <p>What's next? Simply upload your <?php echo $domain; ?> website to <strong>public_html</strong> folder. Looking for more ideas? Check this out:</p>
