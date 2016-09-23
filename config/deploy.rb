@@ -4,6 +4,7 @@ set :user, 'root'
 set :domain, ENV['DOMAIN'] || 'foobar.com'
 set :deploy_to, '/home/awex'
 set :branch, 'master'
+set :repository, 'git@github.com:000webhost/pages.git'
 set :rsync_options, %w[--recursive --delete --delete-excluded --exclude .git* --exclude deploy.rb]
 set :rsync_copy, "rsync --archive"
 set :rsync_stage, "tmp/#{ENV['DOMAIN']}-deploy"
