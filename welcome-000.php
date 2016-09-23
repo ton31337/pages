@@ -66,6 +66,9 @@
         a:hover{
             color: #930203;
         }
+        h2 {
+            font-size: 1.5em;
+        }
         .text-primary{
             color:#B60203;
         }
