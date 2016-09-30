@@ -12,6 +12,9 @@ set :forward_agent, true
 
 desc 'Deploy to server'
 task :deploy do
+  to :before_hook do
+    system "rm -rf #{settings.rsync_stage}"
+  end
   deploy do
     invoke 'rsync:deploy'
     invoke :'deploy:cleanup'
