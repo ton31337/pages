@@ -8,3 +8,6 @@
 
 `https://github.com/joomla/joomla-cms/releases/`
 
+## Get new Drupal release from
+
+`https://www.drupal.org/download`
