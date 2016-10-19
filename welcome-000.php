@@ -171,7 +171,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="https://www.000webhost.com/upgrade" target="_blank"><i class="fa fa-heart"></i> Upgrade</a></li>
-                    <li><a href="http://www.000webhost.com/forum/" target="_blank"><i class="fa fa-comment"></i> Forum</a></li>
+                    <li><a href="https://www.000webhost.com/forum/" target="_blank"><i class="fa fa-comment"></i> Forum</a></li>
                     <li><a href="https://www.000webhost.com/cpanel-login" target="_blank"><i class="fa fa-lock"></i> Login</a></li>
                 </ul>
             </div>
@@ -212,7 +212,7 @@
                     <div class="panel-body text-center">
                         <h3><i class="fa fa-flask"></i> Learn, Build, Grow!</h3>
                         <p class="description">Here we will teach you how to run successful websites that really grow.</p>
-                        <a href="http://www.000webhost.com/forum/" target="_blank">Click &amp; learn more</a>
+                        <a href="https://www.000webhost.com/forum/" target="_blank">Click &amp; learn more</a>
                     </div>
                 </div>
             </div>
