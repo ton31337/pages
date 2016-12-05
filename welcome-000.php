@@ -427,7 +427,7 @@
 
                         ?>
 
-                        <table style="<?php if($totalCount == 0): ?> display:none <?php endif;?>" class="text-left table table-striped">
+                        <table style="<?php if($totalCount == 0  && @$_GET['dir'] == ''): ?> display:none <?php endif;?>" class="text-left table table-striped">
                             <thead>
                             <tr id="listingheader">
                                 <th id="headerfile">File</th>
