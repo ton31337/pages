@@ -2,7 +2,7 @@ require 'mina/rsync'
 
 set :user, 'root'
 set :domain, ENV['DOMAIN'] || 'foobar.com'
-set :deploy_to, '/home/awex'
+set :deploy_to, '/opt/awex-pages'
 set :branch, 'master'
 set :repository, 'git@github.com:000webhost/pages.git'
 set :rsync_options, %w[--recursive --delete --delete-excluded --exclude .git* --exclude deploy.rb]
